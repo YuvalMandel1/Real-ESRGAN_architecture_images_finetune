@@ -1,4 +1,13 @@
-# Real-ESRGAN architecture images finetune
+# Real-ESRGAN Architecture Images Finetune
+<p align="center">
+    046211- Deep Learning Course, ECE Faculty, Technion
+    <br>
+    <br>
+    :tiger: Tomer Richter Barouch: <a href="https://www.linkedin.com/in/tomerrb/">LinkdIn</a> , <a href="https://github.com/tomerrb">GitHub</a>
+    <br>
+    :wolf: Yuval Mandel: <a href="https://www.linkedin.com/in/yuval-mandel/">LinkdIn</a> , <a href="https://github.com/YuvalMandel1">GitHub</a>
+</p>
+
 In this project we aim to fine-tune the Real-ESRGAN model to handle real-life architecture images in a better way.
 ## :brain: Introduction
 Single image super-resolution is an active research topic, which aims at reconstructing a high-resolution image from its low-resolution counterpart. One of the current best models in the field is Real-ESRGAN (Real Enhanced Super Resolution GAN), which uses a more advanced degradation process than its predecessors. One of the limitation with Real-ESRGAN and other models is the loss of details and textures important for real-life images, Because of the training on more simple, texture-less images like animation. In this project we aim to fine-tune the Real-ESRGAN model to handle real-life architecture images in a better way.
@@ -11,7 +20,7 @@ The Real-ESRGAN model is the product of several successful research attempts, st
 
 
 
-The next step in the model evolution was the introduction of ESRGAN. The new model updated the Generator model so it is composed the following way:
+The next step in the model evolution was the introduction of <a href="https://github.com/xinntao/ESRGAN/tree/master">ESRGAN</a>. The new model updated the Generator model so it is composed the following way:
 1.	A basic component is the RDB (Residual Dense Block). It has an input size of 64 channels, which is composed of 5 convolution layers, (3x3 kernel, stride 1 and padding 1) and a Leaky-ReLU layer. Each layer receives the all of the inputs of the layers that were previous to it (Skip connection) and the output of the layer before it, and has an output of 32 channels, except the final layer which has an output of 64 channels.
 2.	The component that wraps the RDB is the RRDB (Residual-in-Residual Dense Block, also known as Basic Block). It holds 3 RDB’s with skip connections.
 3.  The final architecture is composed first with:
@@ -44,7 +53,7 @@ The discriminator neural network is composed from 10 convolution layers, the fol
 9.	64 input channels, 64 output channels, 3x3 kernel, stride 1, padding 1 and no bias.
 10.	64 input channels, 1 output channels, 3x3 kernel, stride 1, padding 1
 
-The Real-ESRGAN model, based on ESRGAN, replaced the Degradation process applied to high-resolution images to receive low-resolution images used for training and testing the model. The new degradation process is conducted with 4 functions: Blur, Resize (Down-sampling), Noise and JPEG Compression. Each of those 4 steps is performed twice, and lastly a 2D-sinc filter is employed to synthesize common ringing and overshoot artifacts. This process emulates real-life degradation processes performed by cameras, image editors, transmission over the internet and more.
+The <a href="https://github.com/xinntao/Real-ESRGAN">Real-ESRGAN</a> model, based on ESRGAN, replaced the Degradation process applied to high-resolution images to receive low-resolution images used for training and testing the model. The new degradation process is conducted with 4 functions: Blur, Resize (Down-sampling), Noise and JPEG Compression. Each of those 4 steps is performed twice, and lastly a 2D-sinc filter is employed to synthesize common ringing and overshoot artifacts. This process emulates real-life degradation processes performed by cameras, image editors, transmission over the internet and more.
 
 <p align="center">
     <img src="https://github.com/YuvalMandel1/Real-ESRGAN_architecture_images_finetune/blob/main/images/Real-ESRGAN%20Degredation%20process.png">
@@ -129,3 +138,12 @@ However, the average PSNR has gotten worse by 0.372, but since realistic archite
 4.	Fine-tuning a smaller model (like Real-ESRNet) can be faster with less hardware resources.
 5.	Assimilate in a UI: Finally, after training and assembling the best model, an assimilation in a UI/App is bound to happen. This will be the finished product which could be applied to several tasks in the domains of photography and image editing, architecture and advertising.
 
+## :eyes: See Also
+:arrow_forward: <a href="https://www.youtube.com/watch?v=KZQvO0Va2wE&t=1s">Project Presention</a> (HEB)
+
+## :raised_hands: References
+:arrow_right: C. Ledig et al., “Photo-Realistic Single Image Super-Resolution Using a Generative Adversarial Network,” Sep. 2016. [<a href="https://arxiv.org/abs/1609.04802v5">Arxiv</a>]
+
+:arrow_right: X. Wang et al., “ESRGAN: Enhanced Super-Resolution Generative Adversarial Networks,” Sep. 2018. [<a href="https://arxiv.org/abs/1809.00219">Arxiv</a>]
+
+:arrow_right: X. Wang, L. Xie, C. Dong, and Y. Shan, “Real-ESRGAN: Training Real-World Blind Super-Resolution with Pure Synthetic Data,” Jul. 2021. [<a href="https://arxiv.org/abs/2107.10833">Arxiv</a>]
