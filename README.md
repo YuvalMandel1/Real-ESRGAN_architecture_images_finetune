@@ -11,12 +11,16 @@
 In this project we aim to fine-tune the Real-ESRGAN model to handle real-life architecture images in a better way.
 
 ## :desktop_computer: Running the code
-In order to run the code in this git repo, one must first do these steps:
+In order to train the model in this git repo, one must first do these steps:
 1.	Download the original files from the Real-ESRGAN repo - https://github.com/xinntao/Real-ESRGAN.
-2.	After downloading the files to "your_dir" Add the files from the architecture fine-tune repo in the Real-ESRGAN base folder *in the exact folders they are in both reposetories* i.e:
-    *  *Real_ESRGAN_architecture_finetune.ipynb* in the <your_dir> folder.
-    *  *finetune_realesrgan_x4plus_architecture.yml* in the <your_dir>/options folder.
-    *  *train_finetune_architecture.py* in the <your_dir>/realesrgan folder.
+2.	After downloading the files (Real-ESRGAN-master folder) to <your_dir> Add the files from the architecture fine-tune repo in the Real-ESRGAN base folder *in the exact folders they are in both reposetories* i.e:
+    + For all purposes
+        *  *Real_ESRGAN_architecture_finetune.ipynb* in the <your_dir>/Real-ESRGAN-master folder.
+    + For training
+        *  *finetune_realesrgan_x4plus_architecture.yml* in the <your_dir>/Real-ESRGAN-master/options folder.
+        *  *train_finetune_architecture.py* in the <your_dir>/Real-ESRGAN-master/realesrgan folder.
+    + For inference existing models
+        *  put the pre-trained models (.pth files) in the <your_dir>/Real-ESRGAN-master/weights folder. You can take our pre-trained model from here: https://drive.google.com/drive/folders/1uPlHxRRRZFtSUpNVe1h8xZoWTGwKmd0H?usp=sharing.
 3.	We suggest to upload the updated folder to google drive and work with google colab, but it is possible to work with other tools with some modifications.
 4. open the *Real_ESRGAN_architecture_finetune.ipynb* file and from then you can run the code, needed explnations are in the notebook.
 
