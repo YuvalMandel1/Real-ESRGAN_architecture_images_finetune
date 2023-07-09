@@ -10,9 +10,55 @@
 
 In this project we aim to fine-tune the Real-ESRGAN model to handle real-life architecture images in a better way.
 
-## :desktop_computer: Running the code
+## :link: Quick Links
+Use these links to jump to the proper part:
+
+:fast_forward: <a href="https://github.com/YuvalMandel1/Real-ESRGAN_architecture_images_finetune/tree/main#jigsaw-files-in-this-project">Files In This Project</a>
+
+:fast_forward: <a href="https://github.com/YuvalMandel1/Real-ESRGAN_architecture_images_finetune/tree/main#desktop_computer-running-the-code">Running The Code</a>
+
+:fast_forward: <a href="https://github.com/YuvalMandel1/Real-ESRGAN_architecture_images_finetune/tree/main#brain-introduction">Introduction</a>
+
+:fast_forward: <a href="https://github.com/YuvalMandel1/Real-ESRGAN_architecture_images_finetune/tree/main#woman_teacher-previous-work">Previous Work</a>
+
+:fast_forward: <a href="https://github.com/YuvalMandel1/Real-ESRGAN_architecture_images_finetune/tree/main#man_scientist-method">Method</a>
+
+  &emsp; :small_orange_diamond: <a href="https://github.com/YuvalMandel1/Real-ESRGAN_architecture_images_finetune/tree/main#cd-dataset-managment">Dataset Managment</a>
+
+  &emsp; :small_orange_diamond: <a href="https://github.com/YuvalMandel1/Real-ESRGAN_architecture_images_finetune/tree/main#man_with_probing_cane-choosing-training-layer">Choosing Training Layer</a>
+    
+  &emsp; :small_orange_diamond: <a href="https://github.com/YuvalMandel1/Real-ESRGAN_architecture_images_finetune/tree/main#running_man-training-the-last-layer">Training The Last Layer</a>
+
+:fast_forward: <a href="https://github.com/YuvalMandel1/Real-ESRGAN_architecture_images_finetune/tree/main#cherries-results">Results</a>
+
+  &emsp; :small_orange_diamond: <a href="https://github.com/YuvalMandel1/Real-ESRGAN_architecture_images_finetune/tree/main#art-qualitative-results">Qualitative Results</a>
+
+  &emsp; :small_orange_diamond: <a href="https://github.com/YuvalMandel1/Real-ESRGAN_architecture_images_finetune/tree/main#dart-quantitative-results">Quantitative Results</a>
+
+:fast_forward: <a href="https://github.com/YuvalMandel1/Real-ESRGAN_architecture_images_finetune/tree/main#man_student-conclusions">Conclusions</a>
+
+:fast_forward: <a href="https://github.com/YuvalMandel1/Real-ESRGAN_architecture_images_finetune/tree/main#rocket-future-work">Future Work</a>
+
+:fast_forward: <a href="https://github.com/YuvalMandel1/Real-ESRGAN_architecture_images_finetune/tree/main#eyes-see-also">See Also</a>
+
+:fast_forward: <a href="https://github.com/YuvalMandel1/Real-ESRGAN_architecture_images_finetune/tree/main#raised_hands-references">References</a>
+
+
+
+## :jigsaw: Files In This Project
+This repo contains the following files:
+
+:arrow_forward: *Real_ESRGAN_architecture_finetune.ipynb* -- The main peace of code and the notebook used for both training and inference/test.
+
+:arrow_forward: *options/finetune_realesrgan_x4plus_architecture.yml* -- This file is used for training in order to define the parameters of the training process, like learning rate and validation frequncy.
+
+:arrow_forward: *realesrgan/train_finetune_architecture.py* -- This is used to train new models.
+
+:arrow_forward: *inference_realesrgan_architecture.py* -- This file is used for inference or test trained networks.
+
+## :desktop_computer: Running The Code
 In order to train the model in this git repo, one must first do these steps:
-1.	Download the original files from the Real-ESRGAN repo - https://github.com/xinntao/Real-ESRGAN.
+1.	Download the original files from the <a href="https://github.com/xinntao/Real-ESRGAN">Real-ESRGAN repo</a>.
 2.	After downloading the files (Real-ESRGAN-master folder) to <your_dir> Add the files from the architecture fine-tune repo in the Real-ESRGAN base folder *in the exact folders they are in both reposetories* i.e:
     + For all purposes
         *  *Real_ESRGAN_architecture_finetune.ipynb* in the <your_dir>/Real-ESRGAN-master folder.
@@ -20,7 +66,7 @@ In order to train the model in this git repo, one must first do these steps:
         *  *finetune_realesrgan_x4plus_architecture.yml* in the <your_dir>/Real-ESRGAN-master/options folder.
         *  *train_finetune_architecture.py* in the <your_dir>/Real-ESRGAN-master/realesrgan folder.
     + For inference existing models
-        *  put the pre-trained models (.pth files) in the <your_dir>/Real-ESRGAN-master/weights folder. You can take our pre-trained model from here: https://drive.google.com/drive/folders/1uPlHxRRRZFtSUpNVe1h8xZoWTGwKmd0H?usp=sharing.
+        *  put the pre-trained models (.pth files) in the <your_dir>/Real-ESRGAN-master/weights folder. You can take our pre-trained model from <a href="https://drive.google.com/drive/folders/1uPlHxRRRZFtSUpNVe1h8xZoWTGwKmd0H?usp=sharing">here</a>. 
 3.	We suggest to upload the updated folder to google drive and work with google colab, but it is possible to work with other tools with some modifications.
 4. open the *Real_ESRGAN_architecture_finetune.ipynb* file and from then you can run the code, needed explnations are in the notebook.
 
