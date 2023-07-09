@@ -39,7 +39,7 @@ datasets:
     name: architecture_train
     type: RealESRGANDataset
     dataroot_gt: ./
-    meta_info: datasets/modernarchitecture/train/meta_info_train.txt
+    meta_info: datasets/modernarchitecture/meta_info_train.txt
     io_backend:
       type: disk
 
