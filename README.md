@@ -9,6 +9,17 @@
 </p>
 
 In this project we aim to fine-tune the Real-ESRGAN model to handle real-life architecture images in a better way.
+
+## :desktop_computer: Running the code
+In order to run the code in this git repo, one must first do these steps:
+1.	Download the original files from the Real-ESRGAN repo - https://github.com/xinntao/Real-ESRGAN.
+2.	After downloading the files to "your_dir" Add the files from the architecture fine-tune repo in the Real-ESRGAN base folder *in the exact folders they are in both reposetories* i.e:
+    *  *Real_ESRGAN_architecture_finetune.ipynb* in the <your_dir> folder.
+    *  *finetune_realesrgan_x4plus_architecture.yml* in the <your_dir>/options folder.
+    *  *train_finetune_architecture.py* in the <your_dir>/realesrgan folder.
+3.	We suggest to upload the updated folder to google drive and work with google colab, but it is possible to work with other tools with some modifications.
+4. open the *Real_ESRGAN_architecture_finetune.ipynb* file and from then you can run the code, needed explnations are in the notebook.
+
 ## :brain: Introduction
 Single image super-resolution is an active research topic, which aims at reconstructing a high-resolution image from its low-resolution counterpart. One of the current best models in the field is Real-ESRGAN (Real Enhanced Super Resolution GAN), which uses a more advanced degradation process than its predecessors. One of the limitation with Real-ESRGAN and other models is the loss of details and textures important for real-life images, Because of the training on more simple, texture-less images like animation. In this project we aim to fine-tune the Real-ESRGAN model to handle real-life architecture images in a better way.
 ## :woman_teacher: Previous work
@@ -131,16 +142,6 @@ However, the average PSNR has gotten worse by 0.372, but since realistic archite
 1.  Validate POC of architecture images: In this project we have proven that fine-tuning the Real-ESRGAN model to a specific domain of architecture images can improve its performance and similarity to natural architecture images.
 2.  In general, fine-tuning a super-resolution model to a specific domain of images that share similar features, might be very beneficial for unseen images of that domain.
 3.  The last layers have better and greater influence on the image restoration compared to the front-most layers, and for other domain fine-tuning we recommend using the available hardware resources to train mostly them for better model performance.
-
-## :desktop_computer: Running the code
-In order to run the code in this git repo, one must first do these steps:
-1.	Download the original files from the Real-ESRGAN repo - https://github.com/xinntao/Real-ESRGAN.
-2.	After downloading the files to "your_dir" Add the files from the architecture fine-tune repo in the Real-ESRGAN base folder *in the exact folders they are in both reposetories* ie:
-    *  *Real_ESRGAN_architecture_finetune.ipynb* in the your_dir folder.
-    *  *finetune_realesrgan_x4plus_architecture.yml* in the your_dir/options folder.
-    *  *train_finetune_architecture.py* in the your_dir/realesrgan folder.
-3.	We suggest to upload the updated folder to google drive and work with google colab, but it is possible to work with other tools with some modifications.
-4. open the *Real_ESRGAN_architecture_finetune.ipynb* file and from then you can run the code, needed explnations are in the notebook.
 
 ## :rocket: Future Work
 1.	Continue training, possibly trying more hyper parameters: The model might improve with more training as seen in previous sections. It is very possible that different hyper-parameters like a smaller learning rate, the usage of different schedulers will improve the seen results.
