@@ -136,7 +136,7 @@ However, the average PSNR has gotten worse by 0.372, but since realistic archite
 In order to run the code in this git repo, one must first do these steps:
 1.	Download the original files from the Real-ESRGAN repo - https://github.com/xinntao/Real-ESRGAN.
 2.	After downloading the files to "your_dir" Add the files from the architecture fine-tune repo in the Real-ESRGAN base folder *in the exact folders they are in both reposetories* ie:
-    *  *Real_ESRGAN_architecture_finetune.ipynb* in the *yourt_dir* folder.
+    *  *Real_ESRGAN_architecture_finetune.ipynb* in the your_dir folder.
     *  *finetune_realesrgan_x4plus_architecture.yml* in the your_dir/options folder.
     *  *train_finetune_architecture.py* in the your_dir/realesrgan folder.
 3.	We suggest to upload the updated folder to google drive and work with google colab, but it is possible to work with other tools with some modifications.
