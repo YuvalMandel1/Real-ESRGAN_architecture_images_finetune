@@ -126,10 +126,21 @@ In terms of quantitative metrics, we saw the following results over the test set
 
 We can see a significant improvement of 0.057 in the average Naturalness Image Quality Evaluator (NIQE) metric, which compares the naturalness of an image compared to other natural images (This metric is an ML product that was learned on different natural images).
 However, the average PSNR has gotten worse by 0.372, but since realistic architecture images are noisier than extra smooth images, which Real-ESRGAN produces, this metric is probably not the best way to evaluate our results, because the noise isn’t necessarily unwanted.
+
 ## :man_student: Conclusions
-1.	Validate POC of architecture images: In this project we have proven that fine-tuning the Real-ESRGAN model to a specific domain of architecture images can improve its performance and similarity to natural architecture images.
-2.	In general, fine-tuning a super-resolution model to a specific domain of images that share similar features, might be very beneficial for unseen images of that domain.
-3.	The last layers have better and greater influence on the image restoration compared to the front-most layers, and for other domain fine-tuning we recommend using the available hardware resources to train mostly them for better model performance.
+1.  Validate POC of architecture images: In this project we have proven that fine-tuning the Real-ESRGAN model to a specific domain of architecture images can improve its performance and similarity to natural architecture images.
+2.  In general, fine-tuning a super-resolution model to a specific domain of images that share similar features, might be very beneficial for unseen images of that domain.
+3.  The last layers have better and greater influence on the image restoration compared to the front-most layers, and for other domain fine-tuning we recommend using the available hardware resources to train mostly them for better model performance.
+
+## :desktop_computer: Running the code
+In order to run the code in this git repo, one must first do these steps:
+1.	Download the original files from the Real-ESRGAN repo - https://github.com/xinntao/Real-ESRGAN.
+2.	After downloading the files to "your_dir" Add the files from the architecture fine-tune repo in the Real-ESRGAN base folder *in the exact folders they are in both reposetories* ie:
+    *  *Real_ESRGAN_architecture_finetune.ipynb* in the *yourt_dir* folder.
+    *  *finetune_realesrgan_x4plus_architecture.yml* in the your_dir/options folder.
+    *  *train_finetune_architecture.py* in the your_dir/realesrgan folder.
+3.	We suggest to upload the updated folder to google drive and work with google colab, but it is possible to work with other tools with some modifications.
+4. open the *Real_ESRGAN_architecture_finetune.ipynb* file and from then you can run the code, needed explnations are in the notebook.
 
 ## :rocket: Future Work
 1.	Continue training, possibly trying more hyper parameters: The model might improve with more training as seen in previous sections. It is very possible that different hyper-parameters like a smaller learning rate, the usage of different schedulers will improve the seen results.
